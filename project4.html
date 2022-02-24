@@ -1,0 +1,156 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>MRI computer vision</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Portfolio</a>
+					</header>
+
+				<!-- Nav -->
+				<nav id="nav">
+					<ul class="links">
+						<li><a href="index.html">Overview</a></li>
+						<li><a href="project1.html">BCI</a></li>
+						<li><a href="project2.html">COVID</a></li>
+						<li><a href="project3.html">EYE_TRACKER</a></li>
+						<li class="active"><a href="project4.html">Image processing and computer vision</a></li>
+					</ul>
+					<ul class="icons">
+						<li><a href="#" class="icon brands fa-linkedin"><span class="label">fa-linkedin</span></a></li>
+						<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+					</ul>
+				</nav>
+				<!-- Main -->
+					<div id="main">
+
+							<!-- Post -->
+							<section class="post">
+								<header class="major">
+									
+									<h1>COMPUTER VISION AND IMAGE PROCESSING APPLICATIONS</h1>
+									<h3>OBJECT DETECTION </h3>
+									<li><b> ESTIMATION OF LEFT VENTRICULUM DYNAMICS FORM MRI SINGLE AXIS ACQUISITION </b></li>
+									<p>We performed an automatic detection of endocardium volume and its eccentricity based on computer vision algorithm starting from raw MRI short axis frames of a complete cardiac cycle.</header>
+								<div class="image main"><img src="images/COMPUTE_VISION_CHT.png" alt="" /></div>
+								<p> In this work we tried to estimate the heart dynamic based on an automatic computer vision algorithm that tries first to extract the location of the left ventriculum (LV) from chest MRI acquisition performing a region of interest (ROI) identification on the first frame, applying then the mask extracted to the 
+									subsequent frames in order to save computation speed. The automatic coordinate detecion of the LV is achieved by applying a circular Hough Trasform, the purpose of the technique is to find imperfect instances of objects within a certain class of shapes by a voting procedure. In this application we set the equation of a circle as the default recognition shape, the radius range wa set between 15-30 pixels which correspond to a 27-45 mm that correspond to anatomical range size of the LV.     
+									
+								</p>
+								<p>
+									After extracting the correct circle location a binary mask is created and then convoluted with all the frames in order to perform the next post processing steps just on the ROI</p>
+							
+								<div class="image main"><img src="images/COMPUTER_VISION_MASK.png" alt="" /></div>
+								<p> Then, to perform a correct segmentation of the object, after applying a selection criteria based on a simple binary 
+									threshold on the pixel intensity since the structure of interest present higher values then the background, starting from the binarized image extracted, the boundaries of the object are extracted based on pixel connectivity criteria.
+								</p>
+								<div class="image main"><img src="images/COMPUTER_VISION_segmentatiom.png" alt="" /></div>
+								<p> To estimate the volume we multiplied the number of pixel for the axial resolution contained in the metadata of the MRI aquisition, the eccentricity is calculated as the ratio of the distances of a point on the ellipse from the focus, and the directrix.</p>
+								
+								<li><b>Automatic recognition of pillpacks filling level </b></li>
+								<p>We performed an automatic detection for quantifying the remaining number of tablets left in a pillpack performing post processing of a raw image.</header>
+								<div class="image main"><img src="images/BLISTER4.png" alt="" /></div>
+
+								<p> The first operation useful to inspect the information contained in the image is to perform color conversion and pass from RGB expression to HSV.  </p>
+								
+								<p> To extract the contours of the blister from the whole image we perfomred the canny edge detection algorithm based on the derivative of a 10x10 Gaussian filter with a sensibility threshold of
+									0.12 to extract and mantain the continuity of the borders, after that the bounding box of the image is axtracted based on continuinity of the region.
+								</p>
+								<div class="image main"><img src="images/Blister3.png" alt="" /></div>
+
+								<p> Then we identified which of the borders contained the expiring date extracting as Region Of Interest as the borders of the blister and a canny edge detector algorithm with a majority voting to 
+									understand with borders contained the greater number of features.   </p>
+									<div class="image main"><img src="images/BLISTER5.png" alt="" /></div>
+								<p> Finally to extract how many pills are present in the blister, thanks to the hypothesis that the presence of the pills is reflected in a very low level of the HUE channel, 
+									thanks to an object recognition algorithm tuned at a partivcular value of inclonation, area and eccentricity it is possible to identify the present pills.</p>
+
+
+							
+							</section>
+
+								
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<section>
+							<form method="post" action="#">
+								<div class="fields">
+									<div class="field">
+										<label for="name">Name</label>
+										<input type="text" name="name" id="name" />
+									</div>
+									<div class="field">
+										<label for="email">Email</label>
+										<input type="text" name="email" id="email" />
+									</div>
+									<div class="field">
+										<label for="message">Message</label>
+										<textarea name="message" id="message" rows="3"></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" /></li>
+								</ul>
+							</form>
+						</section>
+						<section class="split contact">
+							<section class="alt">
+								<h3>Address</h3>
+								<p>1234 Somewhere Road #87257<br />
+								Nashville, TN 00000-0000</p>
+							</section>
+							<section>
+								<h3>Phone</h3>
+								<p><a href="#">(000) 000-0000</a></p>
+							</section>
+							<section>
+								<h3>Email</h3>
+								<p><a href="#">info@untitled.tld</a></p>
+							</section>
+							<section>
+								<h3>Social</h3>
+								<ul class="icons alt">
+									<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</section>
+						</section>
+					</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

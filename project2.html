@@ -1,0 +1,127 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Generic Page - Massively by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Portfolio</a>
+					</header>
+
+				<!-- Nav -->
+				<nav id="nav">
+					<ul class="links">
+						<li><a href="index.html">Overview</a></li>
+						<li><a href="project1.html">BCI</a></li>
+						<li class="active"><a href="project2.html">COVID</a></li>
+						<li><a href="project3.html">EYE_TRACKER</a></li>
+						<li><a href="project4.html">Image processing and computer vision</a></li>
+						
+					</ul>
+					<ul class="icons">
+						<li><a href="#" class="icon brands fa-linkedin"><span class="label">fa-linkedin</span></a></li>
+						<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+					</ul>
+				</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									
+									<h1>CAM of RESNET18 trained on Imagenet for Covid-19 pneumonia detection<br />
+									</h1>
+									<p>Developement of an algorithm to classify toracic x-ray images with covid induced pneumonia from healthy subject and patients with non-covid related pneumonia. We trained a state of the art CNN adapting an open source imageset and evaluated the class activation maps of the network to extrapolate remarkable insights in such diagnostic science based on the decision rules developed by the model. </p>
+								</header>
+								<div class="image main"><img src="images/Covid_pneumonia2.png" alt="" /></div>
+								<p>COVID-19 disease is one of the biggest challenges of the 21st century. At the time of this work, about 150 million people have been tested positive, and more than 3 million of people have died as a result. The fighting of this virus has required, and still requires, heroism of the healthcare workers, efficiency in the research for an effective vaccination, social organization and technological solutions. As of now, the main clinical tool currently in use for the diagnosis of COVID-19 is the Reverse Transcription Polymerase Chain Reaction (RT- PCR), which is expensive, less-sensitive and requires specialized medical personnel. On the other hand, X-ray imaging is an easily accessible tool currently worldwide performed, and that could be exploited as an alternative in the COVID-19 diagnosis. </p>
+								<p>This work proposes a robust technique for the automatic detection of COVID-19 and viral pneumonia from digital chest X-ray images applying the ResNet18 pre-trained deep-learning algorithm while maximizing the detection accuracy. Moreover, the Class Activation Mapping has been implemented to highlight the most relevant pixels which led to the classification of the image. The effectiveness of the proposed method was evaluated on a public chest X-ray images database, containing images labelled as COVID-19, viral pneumonia and normal images. The networks were trained to classify two different schemes: i) normal and COVID-19 pneumonia; ii) normal, viral and COVID- 19 pneumonia, while 3-folds cross validation was performed to inspect the presence of sub-dataset able to better or equally generalize the problem. The classification accuracy reached the 95% level. Hence, this work shows how computer aided tools can be used to significantly improve the speed and the accuracy of the COVID-19 diagnosis, as well as reduce the work load of the healthcare workers.
+								</p>
+								<div class="image main"><img src="images/COVID_ACCURACY.png" alt="" /></div>
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<section>
+							<form method="post" action="#">
+								<div class="fields">
+									<div class="field">
+										<label for="name">Name</label>
+										<input type="text" name="name" id="name" />
+									</div>
+									<div class="field">
+										<label for="email">Email</label>
+										<input type="text" name="email" id="email" />
+									</div>
+									<div class="field">
+										<label for="message">Message</label>
+										<textarea name="message" id="message" rows="3"></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" /></li>
+								</ul>
+							</form>
+						</section>
+						<section class="split contact">
+							<section class="alt">
+								<h3>Address</h3>
+								<p>1234 Somewhere Road #87257<br />
+								Nashville, TN 00000-0000</p>
+							</section>
+							<section>
+								<h3>Phone</h3>
+								<p><a href="#">(000) 000-0000</a></p>
+							</section>
+							<section>
+								<h3>Email</h3>
+								<p><a href="#">info@untitled.tld</a></p>
+							</section>
+							<section>
+								<h3>Social</h3>
+								<ul class="icons alt">
+									<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</section>
+						</section>
+					</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
